@@ -28,9 +28,7 @@
  * Esta interface indica as operações que uma classe que deseja 
  * ter o comportamento de ser Empilhável precisa.
  * 
- * @author Oliveira, C. R. S.
- * @version 1.1
- * @since 2025-05-01
+ * @version 1.0s
  */
 public interface Empilhavel<T> {
 	void empilhar(T dado);
