@@ -4,9 +4,9 @@ import java.util.NoSuchElementException;
  * Esta classe implementa uma pilha, é uma estrutura de 
  * dados que segue o princípio LIFO (Last In, First Out).
  * 
- * @author Oliveira, C. R. S.
- * @version 1.1
- * @since 2025-05-01
+ * 
+ * @version 1.0
+ *
  */
 public class PilhaDinamicaGenerica<T> implements Empilhavel<T> {
 	private int tamanho;
