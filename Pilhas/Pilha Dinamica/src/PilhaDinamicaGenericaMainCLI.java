@@ -1,13 +1,6 @@
-//Executar todos os comandos dentro da pasta "Pilha Dinâmica Genérica"
-//compilar fonte: javac src/Empilhavel.java -d bin
-//ou
-//compilar fonte: javac src/*.java -d bin
-
-//executar fonte: java -cp .;bin PilhaDinamicaGenericaMainCLI
-
 import java.util.InputMismatchException;
-import java.util.Scanner;
 import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 public class PilhaDinamicaGenericaMainCLI {
   public static void main(String[] args) {
