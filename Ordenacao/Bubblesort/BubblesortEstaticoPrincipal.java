@@ -1,4 +1,4 @@
-package Bubblesort;
+package Ordenacao.Bubblesort;
 import java.util.Random;
 
 public class BubblesortEstaticoPrincipal {

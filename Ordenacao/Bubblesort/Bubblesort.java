@@ -1,3 +1,4 @@
+package Ordenacao.Bubblesort;
 public class Bubblesort implements Ordenavel {
 
 	private Object dados[];
