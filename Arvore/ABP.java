@@ -29,21 +29,17 @@ public class ABP<T> implements Arborizavel<T> {
             NoTriplo<T> noAuxiliar = raiz;
             while (noAuxiliar != null) {
                 if ((Integer) dado < (Integer) noAuxiliar.getDado()) {
-                    //preciso ir para a esquerda
                     if (noAuxiliar.getEsquerda() != null) {
                         noAuxiliar = noAuxiliar.getEsquerda();
                     } else {
-                        //insiro o dado aq
                         noAuxiliar.setEsquerda(novoNo);
                         novoNo.setGenitor(noAuxiliar);
                         break;
                     }
                 } else {
-                    //preciso ir para a direita
                     if (noAuxiliar.getDireita() != null) {
                         noAuxiliar = noAuxiliar.getDireita();
                     } else {
-                        //insiro o dado q
                         noAuxiliar.setDireita(novoNo);
                         novoNo.setGenitor(noAuxiliar);
                         break;
@@ -57,19 +53,15 @@ public class ABP<T> implements Arborizavel<T> {
     @Override
     public T apagar(T dado) {
         NoTriplo<T> noAuxiliar = buscar(dado);
-        // Nó não encontrado na árvore
         if (noAuxiliar == null)   
             return null;
 
-        // Caso 1: Nó sem filhos
         if (noAuxiliar.getEsquerda() == null &&
                 noAuxiliar.getDireita() == null)
             apagarNoFolha(noAuxiliar);
-        // Caso 2: Nó com um filho
         else if (noAuxiliar.getEsquerda() == null ||
                 noAuxiliar.getDireita() == null)
             apagarComUmFilho(noAuxiliar);
-        // Caso 3: Nó com dois filhos
         else
             apagarComDoisFilhos(noAuxiliar);
 
@@ -97,10 +89,8 @@ public class ABP<T> implements Arborizavel<T> {
             raiz = null;
         } else {
             if (nodo.equals(pai.getEsquerda()))
-                //nodo é filho da esquerda
                 pai.setEsquerda(null);
             else
-                //nodo é filho da direita        
                 pai.setDireita(null);
 
             nodo.setGenitor(null);
@@ -124,16 +114,12 @@ public class ABP<T> implements Arborizavel<T> {
     }
 
     private void apagarComDoisFilhos(NoTriplo<T> nodo) {
-        //sucessor pode ser o menor a direita ou o maior a esquerda
         NoTriplo<T> sucessor = encontraMenorDireita(nodo);
-        //NoTriplo<T> sucessor = encontraMaiorEsquerda(nodo);
         
-        //troca conteúdo do nó com o menor nó a direita
         T temp = nodo.getDado();
         nodo.setDado(sucessor.getDado());
         sucessor.setDado(temp);
 
-        // Remove o menor a direita (que agora contém o dado original)
         if (sucessor.getEsquerda() == null && 
         sucessor.getDireita() == null) {
             apagarNoFolha(sucessor);
@@ -158,7 +144,7 @@ public class ABP<T> implements Arborizavel<T> {
         return sucessor;
     } 
 
-    //existe
+    
     @Override
     public boolean existe(T dado) {
         boolean retorno = false;
@@ -227,10 +213,10 @@ public class ABP<T> implements Arborizavel<T> {
         String resultado;
         do {
             resultado = msg;
-            msg = msg.replace("  ", " "); //remove excesso de espaços
+            msg = msg.replace("  ", " "); 
         } while (!msg.equals(resultado));
-        msg = msg.trim(); //remove espaços em branco do inicio e fim, se existir
-        msg = msg.replace(" ", ","); //troca espaço por vírgula
+        msg = msg.trim(); 
+        msg = msg.replace(" ", ","); 
         return "[" + msg + "]";
     }
 }
