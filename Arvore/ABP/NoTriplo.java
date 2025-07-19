@@ -1,3 +1,4 @@
+package Arvore.ABP;
 public class NoTriplo<T> {
 
 	

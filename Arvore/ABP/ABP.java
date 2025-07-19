@@ -1,4 +1,4 @@
-package abp;
+package Arvore.ABP;
 
 public class ABP<T> implements Arborizavel<T> {
 
