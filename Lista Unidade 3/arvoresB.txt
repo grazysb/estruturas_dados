@@ -1,0 +1,53 @@
+1- Inserir as chaves na sequência: 10, 20, 5, 6 , 12, 30, 7, 17
+        [10]
+      /      \
+    [6]     [20]
+    /       /   \
+ [5|7]  [12|17] [30]
+
+
+2-      [ 8 | 16 ]
+       /    |     \
+ [2 | 4] [10 | 12] [18 | 20]
+
+ Removendo 10: (diretamente)
+
+        [ 8 | 16 ]
+       /    |     \
+ [2 | 4]   [12]   [18 | 20]
+
+Removendo 8: (sobe o maior da esquerda pra raiz e remove o 8)
+
+        [ 4 | 16 ]
+       /    |     \
+    [2]    [12]   [18 | 20]
+
+3- Ordem m = 5, inserir as chaves: 40,20,60,10,30,50,70,25,45
+
+        [30 | 50]
+      /     |     \
+[10|20|25] [40|45] [60|70]
+
+4- Remoção em B Tree de Ordem m=4.
+Construa a B‑Tree a partir das chaves: 1, 2, 3, 4, 5, 6, 7, 8, 9.
+Em seguida, remova, na ordem, as chaves 3, 4 e 5, aplicando concatenação ou redistribuição quando necessário. Desenhe a árvore após cada remoção.
+    
+     [3 | 6]
+    /   |   \
+[1|2] [4|5] [7|8|9]
+
+Removendo 3:
+     [2 | 6]
+    /   |   \
+[1]   [4|5] [7|8|9]
+
+Removendo 4:
+     [2 | 6]
+    /   |   \
+[1]   [5]  [7|8|9]
+
+Removendo 5:
+    [2]
+   /   \
+[1]  [7|8|9]
+
